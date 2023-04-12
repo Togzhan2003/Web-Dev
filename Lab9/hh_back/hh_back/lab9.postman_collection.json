@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "c562dd96-ee6c-4ea5-8cc7-60a2b88f35ba",
+		"name": "lab9",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26801854"
+	},
+	"item": [
+		{
+			"name": "company",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/companies/:company_id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"companies",
+						":company_id"
+					],
+					"variable": [
+						{
+							"key": "company_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "companies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/companies",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vacancies by company",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/companies/:company_id/vacancies",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"companies",
+						":company_id",
+						"vacancies"
+					],
+					"variable": [
+						{
+							"key": "company_id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vacancy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/vacancies/:vacancy_id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"vacancies",
+						":vacancy_id"
+					],
+					"variable": [
+						{
+							"key": "vacancy_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "top ten vacancies by salary",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/vacancies/top_ten",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"vacancies",
+						"top_ten"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vacancies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/vacancies/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"vacancies",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://127.0.0.1:8000/api"
+		}
+	]
+}
